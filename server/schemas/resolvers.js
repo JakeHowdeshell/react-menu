@@ -6,6 +6,9 @@ const resolvers = {
     categories: async () => {
       return await Category.find();
     },
+    allMeals: async () => {
+      return await Meal.find();
+    },
     meals: async (parent, { category, name }) => {
       const params = {};
 
