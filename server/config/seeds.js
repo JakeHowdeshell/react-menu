@@ -20,7 +20,7 @@ db.once("open", async () => {
       name: "Eggs-traordinary Fiesta Taco",
       description:
         "A festive blend of scrambled eggs, chorizo, and melted cheese, all wrapped up in a warm tortilla. Served with a side of salsa and joy.",
-      image: "",
+      image: "images/eggs-traordinary-fiesta-taco.png",
       category: categories[0]._id,
       price: 8.99,
     },
@@ -28,7 +28,7 @@ db.once("open", async () => {
       name: "Sunrise Salsa Supreme",
       description:
         "Start your day with a bang! This taco features sunny-side-up eggs, crispy bacon, avocado, and a zesty tomato salsa.",
-      image: "",
+      image: "images/sunrise-salsa-supreme.png",
       category: categories[0]._id,
       price: 9.49,
     },
@@ -37,7 +37,7 @@ db.once("open", async () => {
       category: categories[0]._id,
       description:
         "Delight in the harmony of ham, fluffy scrambled eggs, and cheddar cheese, drizzled with a maple-infused glaze for that touch of sweetness.",
-      image: "",
+      image: "images/ham-azing-breakfast-bliss.png",
       price: 7.99,
     },
     {
@@ -45,7 +45,7 @@ db.once("open", async () => {
       category: categories[0]._id,
       description:
         "Dive into a blend of creamy scrambled eggs, shredded cheese, and fresh chives, all hugged by a soft tortilla. A classic twist on breakfast happiness!",
-      image: "",
+      image: "images/cheese-n-chive-morning-delight.png",
       price: 8.29,
     },
     {
@@ -53,7 +53,7 @@ db.once("open", async () => {
       category: categories[0]._id,
       description:
         "Healthy meets hearty with this taco featuring avocado slices, poached eggs, and a sprinkle of feta cheese. A burst of freshness in every bite!",
-      image: "",
+      image: "images/avocado-sunrise-sensation.png",
       price: 9.99,
     },
     {
@@ -61,7 +61,7 @@ db.once("open", async () => {
       category: categories[0]._id,
       description:
         "Let the sausages sing in harmony with scrambled eggs, peppers, and onions, creating a symphony of flavors that will make your taste buds dance.",
-      image: "",
+      image: "images/sausage-serenade-supreme.png",
       price: 8.79,
     },
     {
@@ -69,7 +69,7 @@ db.once("open", async () => {
       category: categories[0]._id,
       description:
         "A taco for champions! Packed with sautéed veggies, scrambled tofu, and a dollop of guacamole. A triumph of taste for your breakfast table.",
-      image: "",
+      image: "images/veggie-victory-delight.png",
       price: 8.49,
     },
     {
@@ -77,7 +77,7 @@ db.once("open", async () => {
       category: categories[0]._id,
       description:
         "For our vegetarian aficionados! Black beans, scrambled eggs, and Monterey Jack cheese combine in a fiesta of flavors that will keep you fueled all day.",
-      image: "",
+      image: "images/bountiful-bean-fiesta.png",
       price: 7.99,
     },
     {
@@ -85,7 +85,7 @@ db.once("open", async () => {
       category: categories[0]._id,
       description:
         "Brace yourself for the bacon explosion! Crispy bacon, fluffy eggs, and a dash of hot sauce, all nestled in a tortilla. It's a flavor bomb you won't want to miss.",
-      image: "",
+      image: "images/bacon-bonanza-breakfast-bomb.png",
       price: 9.29,
     },
     {
@@ -93,14 +93,14 @@ db.once("open", async () => {
       category: categories[0]._id,
       description:
         "A sweet twist on tradition! Indulge in the goodness of cinnamon-spiced apples, cream cheese, and a drizzle of honey, all wrapped up in a warm tortilla.",
-      image: "",
+      image: "images/cinnamon-swirl-morning-delight.png",
       price: 8.99,
     },
     {
       name: "Salsa-ry Enchiladas",
       category: categories[1]._id,
       description: "These enchiladas bring the heat with a spicy salsa twist.",
-      image: "",
+      image: "images/salsa-ry-enchiladas.png",
       price: 12.99,
     },
     {
@@ -108,7 +108,7 @@ db.once("open", async () => {
       category: categories[1]._id,
       description:
         "A burger with a guacamole infusion, guaranteed to make your taste buds do the salsa.",
-      image: "",
+      image: "images/guaca-molé-burgers.png",
       price: 10.99,
     },
     {
@@ -116,22 +116,22 @@ db.once("open", async () => {
       category: categories[1]._id,
       description:
         "A delightful quesadilla filled with a cheesy surprise in every bite",
-      image: "",
+      image: "images/quesa-dilla-delight.png",
       price: 9.99,
     },
     {
       name: "Taco Bout Delicious Tamales",
       category: categories[1]._id,
       description: `These tamales are so good, you will be saying, "Let's taco 'bout it!".`,
-      image: "",
+      image: "images/taco-bout-delicious-tamales.png",
       price: 8.99,
     },
     {
       name: "Cilantro Cremosa Chicken",
       category: categories[1]._id,
       description:
-        "ender chicken coated in a cilantro-infused creamy sauce, a flavor fiesta!",
-      image: "",
+        "Tender chicken coated in a cilantro-infused creamy sauce, a flavor fiesta!",
+      image: "images/cilantro-cremosa-chicken.png",
       price: 13.99,
     },
     {
@@ -139,7 +139,7 @@ db.once("open", async () => {
       category: categories[1]._id,
       description:
         "A brilliant burrito bursting with beans, rice, and savory goodness.",
-      image: "",
+      image: "images/burrito-brilliance.png",
       price: 10.99,
     },
     {
@@ -147,7 +147,7 @@ db.once("open", async () => {
       category: categories[1]._id,
       description:
         "Fajita-spiced fries that turn your ordinary side into a flavor fiesta.",
-      image: "",
+      image: "images/fajita-fiesta-fries.png",
       price: 8.99,
     },
     {
@@ -155,7 +155,7 @@ db.once("open", async () => {
       category: categories[1]._id,
       description:
         "Cornbread with a carnival of chili flavors, a spicy and sweet sensation.",
-      image: "",
+      image: "images/chili-con-carnival-cornbread.png",
       price: 5.99,
     },
     {
@@ -163,7 +163,7 @@ db.once("open", async () => {
       category: categories[1]._id,
       description:
         "Tostadas so good, they'll have you dreaming of a tortilla twilight.",
-      image: "",
+      image: "images/tortilla-twilight-tostadas.png",
       price: 9.99,
     },
     {
@@ -171,7 +171,7 @@ db.once("open", async () => {
       category: categories[1]._id,
       description:
         "Nachos with a habanero kick, a heatwave of flavor in every cheesy bite.",
-      image: "",
+      image: "images/habanero-heatwave-nachos.png",
       price: 12.99,
     },
     {
@@ -179,7 +179,7 @@ db.once("open", async () => {
       category: categories[2]._id,
       description:
         "A crunchy twist on the classic with carnitas, veggies, and supreme satisfaction.",
-      image: "",
+      image: "images/carnitas-crunchwrap-supreme.png",
       price: 11.49,
     },
     {
@@ -187,7 +187,7 @@ db.once("open", async () => {
       category: categories[2]._id,
       description:
         "Shrimp cooked to perfection in a sizzling salsa verde, a seafood sensation.",
-      image: "",
+      image: "images/sizzlin-salsa-verde-shrimp.png",
       price: 9.99,
     },
     {
@@ -195,7 +195,7 @@ db.once("open", async () => {
       category: categories[2]._id,
       description:
         "Quesadillas with a macho mango twist, combining sweet and savory in every bite.",
-      image: "",
+      image: "images/macho-mango-queso-quesadilla.png",
       price: 10.99,
     },
     {
@@ -203,7 +203,7 @@ db.once("open", async () => {
       category: categories[2]._id,
       description:
         "These chicken tacos will make your taste buds dance the tango.",
-      image: "",
+      image: "images/tando-de-pollo-tacos.png",
       price: 8.99,
     },
     {
@@ -211,7 +211,7 @@ db.once("open", async () => {
       category: categories[2]._id,
       description:
         "A tantalizing twist on tamales, served in a bowl with savory tofu.",
-      image: "",
+      image: "images/tamale-twist-tofu-bowl.png",
       price: 12.99,
     },
     {
@@ -219,7 +219,7 @@ db.once("open", async () => {
       category: categories[2]._id,
       description:
         "Avocado meets al pastor in an adobo adventure, a match made in Mexican food heaven.",
-      image: "",
+      image: "images/adobo-avocado-al-pastor.png",
       price: 13.99,
     },
     {
@@ -227,7 +227,7 @@ db.once("open", async () => {
       category: categories[2]._id,
       description:
         "A jambalaya with a jalapeño jamboree, a spicy celebration of flavors.",
-      image: "",
+      image: "images/jalapeno-jamboree-jambalaya.png",
       price: 9.99,
     },
     {
@@ -235,7 +235,7 @@ db.once("open", async () => {
       category: categories[2]._id,
       description:
         "Sopes loaded with supreme toppings, a taste of Mexican street food heaven.",
-      image: "",
+      image: "images/sopes-supreme.png",
       price: 7.99,
     },
     {
@@ -243,7 +243,7 @@ db.once("open", async () => {
       category: categories[2]._id,
       description:
         "A crispy churro twist on the classic chimichanga, a dessert lover's dream",
-      image: "",
+      image: "images/crispy-churro-chimichange.png",
       price: 11.99,
     },
     {
@@ -251,7 +251,7 @@ db.once("open", async () => {
       category: categories[2]._id,
       description:
         "Sopapillas serenaded with a dollop of sour cream, a sweet and creamy symphony.",
-      image: "",
+      image: "images/sour-cream-serenade-sopapillas.png",
       price: 6.99,
     },
   ]);
