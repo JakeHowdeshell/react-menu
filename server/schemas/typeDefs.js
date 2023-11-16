@@ -16,7 +16,7 @@ type Category {
   type Order {
     _id: ID
     purchaseDate: String
-    products: [Meal]
+    meals: [Meal]
   }
 
   type User {
