@@ -263,6 +263,7 @@ db.once("open", async () => {
     lastName: "Zhang",
     email: "kenny.zhang12138@gmail.com",
     password: "password12345",
+    phoneNumber: 832 - 444 - 5555,
     orders: [
       {
         meals: [meals[0]._id, meals[3]._id, meals[25]._id],
@@ -275,6 +276,7 @@ db.once("open", async () => {
     lastName: "Howdeshell",
     email: "jakehowdy@gmail.com",
     password: "password12345",
+    phoneNumber: 832 - 555 - 5555,
   });
 
   await User.create({
@@ -282,6 +284,7 @@ db.once("open", async () => {
     lastName: "Ostien",
     email: "chase.ostien@gmail.com",
     password: "password12345",
+    phoneNumber: 832 - 666 - 5555,
   });
 
   await User.create({
@@ -289,6 +292,7 @@ db.once("open", async () => {
     lastName: "Warden",
     email: "richard.warden@gmail.com",
     password: "password12345",
+    phoneNumber: 832 - 777 - 5555,
   });
 
   console.log("users seeded");
