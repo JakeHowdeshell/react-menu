@@ -292,7 +292,7 @@ db.once("open", async () => {
     lastName: "Warden",
     email: "richard.warden@gmail.com",
     password: "password12345",
-    phoneNumber: 832 - 666 - 5555,
+    phoneNumber: 832 - 777 - 5555,
   });
 
   console.log("users seeded");
