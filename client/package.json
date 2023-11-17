@@ -14,7 +14,10 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.11.2"
+    "react-router-dom": "^6.11.2",
+    "@apollo/client": "^3.7.15",
+    "graphql": "^16.6.0",
+    "jwt-decode": "^3.1.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
