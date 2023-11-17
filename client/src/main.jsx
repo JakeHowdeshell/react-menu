@@ -7,6 +7,7 @@ import App from './App.jsx'
 import Home from './pages/HomePage'
 import Meals from './pages/MealsPage.jsx'
 import Cart from './pages/Cart'
+import OrderHistory from './pages/OrderHistory'
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
         path: "/cart",
         element: <Cart />,
       },
+      {
+        path: '/orderhistory',
+        element: < OrderHistory/>
+      }
     ],
   },
 ]);
