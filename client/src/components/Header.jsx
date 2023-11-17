@@ -1,9 +1,9 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
+import AppNavbar from './Nav/Nav';
 
 export default function Header() {
     return (
-        <nav className=''>
-            <p>This is the Header!</p>
-            </nav>
+        <AppNavbar />
     )
 }
