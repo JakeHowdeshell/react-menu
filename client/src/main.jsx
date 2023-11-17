@@ -4,10 +4,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import App from './App.jsx'
 
-import Home from './pages/Home'
-import Breakfast from './pages/Breakfast'
-import Lunch from './pages/Lunch'
-import Dinner from './pages/Dinner'
+import Home from './pages/HomePage'
+import Breakfast from './pages/BreakfastPage'
+import Lunch from './pages/LunchPage'
+import Dinner from './pages/DinnerPage'
 
 const router = createBrowserRouter([
   {
