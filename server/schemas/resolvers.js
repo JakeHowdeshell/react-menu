@@ -4,25 +4,33 @@ const { signToken, AuthenticationError } = require("../utils/auth");
 const resolvers = {
   Query: {
     categories: async () => {
+      //to find all categories
       return await Category.find();
     },
     allMeals: async () => {
+      //to find all meals
       return await Meal.find();
     },
-    meals: async (parent, { category, name }) => {
-      const params = {};
+    meals: async (parent, args, context, info) => {
+      const categoryName = args.name; // Assuming you get categoryName from GraphQL arguments
 
-      if (category) {
-        params.category = category;
+      try {
+        // Find the category
+        const category = await Category.findOne({ name: categoryName });
+        if (!category) {
+          // Handle the case where the category is not found
+          return { error: "Category not found" };
+        }
+        // Find meals with the specified category
+        const meals = await Meal.find({ category: category._id }).populate(
+          "category"
+        );
+        // Handle the found meals
+        return meals;
+      } catch (err) {
+        // Handle any errors that occurred during the process
+        return { error: "Internal server error" };
       }
-
-      if (name) {
-        params.name = {
-          $regex: name,
-        };
-      }
-
-      return await Meal.find(params).populate("category");
     },
     meal: async (parent, { _id }) => {
       return await Meal.findById(_id).populate("category");

@@ -1,8 +1,8 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const QUERY_MEALS = gql`
-  query getMeals($category: ID) {
-    meals(category: $category) {
+  query meals($name: String) {
+    meals(name: $name) {
       _id
       name
       description
@@ -24,7 +24,7 @@ export const QUERY_CHECKOUT = gql`
 `;
 
 export const QUERY_ALL_MEALS = gql`
-  {
+  query allMeals {
     meals {
       _id
       name
