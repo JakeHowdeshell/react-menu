@@ -25,7 +25,7 @@ export const QUERY_CHECKOUT = gql`
 
 export const QUERY_ALL_MEALS = gql`
   query allMeals {
-    meals {
+    allMeals {
       _id
       name
       description
