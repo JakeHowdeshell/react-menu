@@ -9,7 +9,8 @@ const resolvers = {
     },
     allMeals: async () => {
       //to find all meals
-      return await Meal.find();
+      const meals = await Meal.find().populate("category");
+      return meals || [];
     },
     meals: async (parent, args, context, info) => {
       const categoryName = args.name; // Assuming you get categoryName from GraphQL arguments
@@ -19,7 +20,7 @@ const resolvers = {
         const category = await Category.findOne({ name: categoryName });
         if (!category) {
           // Handle the case where the category is not found
-          return { error: "Category not found" };
+          return [];
         }
         // Find meals with the specified category
         const meals = await Meal.find({ category: category._id }).populate(
@@ -29,7 +30,9 @@ const resolvers = {
         return meals;
       } catch (err) {
         // Handle any errors that occurred during the process
-        return { error: "Internal server error" };
+        return ("Internal server error", err);
+
+        return [];
       }
     },
     meal: async (parent, { _id }) => {

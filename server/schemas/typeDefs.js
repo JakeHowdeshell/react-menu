@@ -48,7 +48,7 @@ type Category {
 
   type Query {
     categories: [Category]
-    allMeals:[Meal]
+    allMeals: [Meal]
     meals(name: String): [Meal]
     meal(_id: ID!): Meal
     user: User
