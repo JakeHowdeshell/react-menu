@@ -2,6 +2,8 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { QUERY_MEALS } from "../utils/queries";
+import MealItem from "./MealItem";
+
 
 export default function Meals() {
   const { name } = useParams();
@@ -18,11 +20,18 @@ export default function Meals() {
     return <div>loading</div>;
   }
   return (
-    <div className="my-2">
-      <h2>Our Products:</h2>
-      <div className="flex-row">
+    <div className="col justify-content-md-center">
+      <h2>{name}</h2>
+      <div className="d-flex justify-content-md-center align-content-between flex-wrap">
         {meals.map((meal) => (
-          <ul key={meal._id}>{meal.name}</ul>
+          <MealItem
+            key={meal._id}
+            _id={meal._id}
+            image={meal.image}
+            name={meal.name}
+            price={meal.price}
+            description={meal.description}
+          />
         ))}
       </div>
     </div>

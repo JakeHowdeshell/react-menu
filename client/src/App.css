@@ -1,0 +1,90 @@
+* {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+body {
+  height: 100vh;
+  background-image: url("/images/background.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.hero{
+  background: black
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 0;
+}
+
+.card {
+  margin: 5px;
+  width: 400px;
+  background: white;
+  padding: .4em;
+  border-radius: 6px;
+  border-color: #45B5AA;
+}
+
+.card-image {
+  background-color: #45B5AA;
+  width: 100%;
+  border-radius: 6px 6px 0 0;
+}
+
+.card-image:hover {
+  transition-duration: 500ms, 500ms;
+  transform: scale(0.9);
+}
+
+.title {
+  text-transform: uppercase;
+  height: 80px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #45B5AA;
+  padding: 10px 7px 0;
+}
+
+.title:hover {
+  cursor: pointer;
+  color: rgb(19, 21, 24);
+}
+
+.heading {
+  font-weight: 600;
+  color: rgb(88, 87, 87);
+  padding: 7px;
+  height: 100px
+}
+
+.heading:hover {
+  cursor: pointer;
+}
+
+.comic-button {
+  width: 200px;
+  padding: 1px 1px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #45B5AA;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 3px 3px 0px #000;
+  transition: all 0.3s ease;
+}
+
+.comic-button:hover {
+  background-color: #fff;
+  color: #3db4a8;
+  border: 2px solid #3db4a8;
+  box-shadow: 5px 5px 0px #3db4a8;
+}

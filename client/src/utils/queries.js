@@ -30,6 +30,7 @@ export const QUERY_ALL_MEALS = gql`
       name
       description
       price
+      image
       category {
         name
       }
