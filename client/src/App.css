@@ -6,7 +6,9 @@
 }
 body {
   height: 100vh;
-  background-image: url("/images/background.jpg");
+  /* background-image: url("/images/background.jpg"); */
+  background: transparent url("/images/background.jpg") bottom left no-repeat; 
+  background-attachment:fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
