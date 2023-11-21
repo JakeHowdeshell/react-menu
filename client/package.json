@@ -17,7 +17,8 @@
     "react-router-dom": "^6.11.2",
     "@apollo/client": "^3.7.15",
     "graphql": "^16.6.0",
-    "jwt-decode": "^3.1.2"
+    "jwt-decode": "^3.1.2",
+    "@stripe/stripe-js": "^1.54.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
