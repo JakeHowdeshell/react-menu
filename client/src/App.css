@@ -1,3 +1,13 @@
+:root {
+    --backgroundBlack: #000000;
+    --accentTeal: #45B5AA;
+    --accentWhite: azure;
+    --hoverBlue: #45B5AA;
+    --gray1: #2C3E50;
+    --gray2: #333333;
+    --terracotta: #E2725B;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -7,6 +17,7 @@
   body {
     margin: 0;
     padding: 0;
+    background-color: var(--terracotta);
   }
   
   .wrapper {
@@ -23,12 +34,11 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 20px;
+    background-color: var(--backgroundBlack);
+    position: sticky;
+    top: 0;
+    z-index: 50;
     }
-
-  /* #navitems {
-    display: flex;
-    flex-direction: column;
-  } */
 
   .mr-auto {
     align-items: center;
@@ -51,4 +61,86 @@
     display: flex;
       justify-content: space-evenly;
       align-items: center;
+      color: var(--accentWhite);
+  }
+
+  .links {
+    border: 2px solid var(--accentTeal);
+  margin: 5px 5px;
+  border-radius: 10px;
+  padding: 10px;
+  text-decoration: none; /* To remove default underline */
+  color: var(--accentWhite);
+  }
+
+  .links:hover {
+    background-color: cadetblue;
+  }
+
+  .navbar-nav .nav-link.active {
+    background-color: var(--hoverBlue);
+  }
+
+  /* .nav-link {
+    color: azure;
+    text-decoration: none;
+  } */
+
+  .navbar-toggler {
+    border-color: var(--accentTeal);
+  }
+
+  .navbar-toggler-icon {
+    color: var(--accentTeal);
+    /* background-color: #45B5AA; */
+  }
+
+  .bs-navbar-toggler-icon-bg {
+    background-image: var(--toggle);
+  }
+
+  .links.nav-link {
+    color: var(--accentWhite);
+  }
+
+  .modal-content {
+    background-color: var(--backgroundBlack);
+    border-color: var(--accentTeal);
+  }
+
+  .form-label {
+    color: var(--accentWhite);
+  }
+
+  .form-control {
+    border-color: var(--accentTeal);
+  }
+
+  .nav-pills .nav-link.active {
+    background-color: var(--hoverBlue);
+  }
+
+  .modal-header {
+    flex-direction: column;
+  }
+
+  .nav-item {
+    text-decoration: none;
+  }
+
+  .nav .nav-link:hover {
+    color: var(--accentWhite);
+  }
+
+  .nav .nav-link {
+    color: var(--accentWhite);
+  }
+
+  .btn-btn-success {
+    border: 2px solid var(--accentTeal);
+  margin: 5px 5px;
+  border-radius: 10px;
+  padding: 10px;
+  text-decoration: none; /* To remove default underline */
+  color: var(--accentWhite);
   }
