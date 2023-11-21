@@ -55,6 +55,26 @@
     } 
 }
 
+@media(max-width: 992px){
+    .mr-auto {
+      max-width: 350px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: stretch;
+    } 
+}
+
+.justify-content-end {
+    justify-content: end;
+}
+
+@media(max-width: 992px){
+    .justify-content-end {
+      display: flex;
+      justify-content: center !important;
+    } 
+}
+
   #title {
     font-size: 28px;
     font-weight: 600;
