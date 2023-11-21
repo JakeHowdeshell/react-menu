@@ -9,32 +9,40 @@ import Auth from '../../utils/auth';
 const AppNavbar = () => {
   // set modal display state
   const [showModal, setShowModal] = useState(false);
+  const [showNav, setShowNav] = useState(false);
+
+  const handleToggle = () => {
+    setShowNav(!showNav);
+  };
 
   return (
     <>
-      <Navbar bg="dark" variant="dark" expand="lg">
+      <Navbar bg="dark" variant="dark" expand="lg" className='navbar'>
         <Container fluid>
-          <Navbar.Brand as={Link} to="/">
+          <Navbar.Brand id="title">
+            Restauraunt Name
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="navbar" onClick={handleToggle} />
+          <Navbar.Collapse id="navitems" className={`justify-content-end ${showNav ? 'show' : ''}`}>
+            <Nav className="mr-auto">
+            <Nav.Link as={Link} to="/">
             Menu
-          </Navbar.Brand>
-          <Navbar.Brand as={Link} to="/meal/Breakfast">
-            Breakfast
-          </Navbar.Brand>
-          <Navbar.Brand as={Link} to="/meal/Lunch">
-            Lunch
-          </Navbar.Brand>
-          <Navbar.Brand as={Link} to="/meal/Dinner">
-            Dinner
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbar" />
-          <Navbar.Collapse id="navbar" className="d-flex flex-row-reverse">
-            <Nav className="ml-auto d-flex">
-              {/* if user is logged in show the cart and logout */}
+          </Nav.Link>
+              <Nav.Link as={Link} to="/meal/Breakfast">
+                Breakfast
+              </Nav.Link>
+              <Nav.Link as={Link} to="/meal/Lunch">
+                Lunch
+              </Nav.Link>
+              <Nav.Link as={Link} to="/meal/Dinner">
+                Dinner
+              </Nav.Link>
+              <Nav>
               {Auth.loggedIn() ? (
                 <>
-                <Nav.Link as={Link} to="/orderhistory">
-                Order History
-              </Nav.Link>
+                  <Nav.Link as={Link} to="/orderhistory">
+                    Order History
+                  </Nav.Link>
                   <Nav.Link as={Link} to="/cart">
                     Cart
                   </Nav.Link>
@@ -45,6 +53,7 @@ const AppNavbar = () => {
                   Login/Sign Up to Order
                 </Nav.Link>
               )}
+            </Nav>
             </Nav>
           </Navbar.Collapse>
         </Container>
