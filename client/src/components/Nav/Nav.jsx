@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
 import SignUpForm from './SignupForm';
 import LoginForm from './LoginForm';
-import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
@@ -22,7 +21,7 @@ const AppNavbar = () => {
   return (
     <>
       <Navbar expand="lg">
-        <Nav variant='pills' defaultActiveKey="/" expand="lg" className='navbar'>
+        <Nav variant='pills' defaultActiveKey="/" className='navbar'>
         <Container fluid>
           <Navbar.Brand id="title">
             Restauraunt Name

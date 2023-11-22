@@ -3,9 +3,9 @@
     --accentTeal: #45B5AA;
     --accentWhite: azure;
     --hoverBlue: #45B5AA;
-    --gray1: #2C3E50;
-    --gray2: #333333;
     --terracotta: #E2725B;
+    --titleFont: 'Lobster Two', sans-serif;
+    --textFont: 'Poppins', sans-serif;
 }
 
 *{
@@ -17,7 +17,6 @@
   body {
     margin: 0;
     padding: 0;
-    background-color: var(--terracotta);
   }
   
   .wrapper {
@@ -100,11 +99,6 @@
   .navbar-nav .nav-link.active {
     background-color: var(--hoverBlue);
   }
-
-  /* .nav-link {
-    color: azure;
-    text-decoration: none;
-  } */
 
   .navbar-toggler {
     border-color: var(--accentTeal);
