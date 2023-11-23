@@ -43,20 +43,20 @@ const AppNavbar = () => {
               <Nav.Link as={Link} to="/meal/Dinner" className='links' eventKey="link-4">
                 Dinner
               </Nav.Link>
+              <Nav.Link as={Link} to="/cart" className='links' eventKey="link-5">
+                    Cart
+                  </Nav.Link>
               <Nav>
               {Auth.loggedIn() ? (
                 <>
-                  <Nav.Link as={Link} to="/orderhistory">
+                  <Nav.Link as={Link} to="/orderhistory" className='links'>
                     Order History
                   </Nav.Link>
-                  <Nav.Link as={Link} to="/cart">
-                    Cart
-                  </Nav.Link>
-                  <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
+                  <Nav.Link onClick={Auth.logout} className='links'>Logout</Nav.Link>
                 </>
               ) : (
                 <Nav.Link onClick={() => setShowModal(true)} className='links'>
-                  Login/Sign Up to Order
+                  Login/Sign Up
                 </Nav.Link>
               )}
             </Nav>
