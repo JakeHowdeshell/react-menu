@@ -28,9 +28,9 @@ function OrderHistory() {
                 </h3>
                 <div className="flex-row">
                   {order.meals.map(({ _id, image, name, price }, index) => (
-                    <div key={index} className="card px-1 py-1">
+                    <div key={index} className="card p-1">
                       <Link to={`/meals/${_id}`}>
-                        <img alt={name} src={`/images/${image}`} />
+                        <img alt={name} src={`/images/${image}`} className="card-image" />
                         <p>{name}</p>
                       </Link>
                       <div>

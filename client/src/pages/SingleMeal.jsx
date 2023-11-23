@@ -50,9 +50,9 @@ export default function SingleMeal() {
 
     return (
         <div className="card-lg">
-          <h2 className="">{name}</h2>
+          <h2>{name}</h2>
           <img src={`/images/${image}`} className="card-image-lg"></img>
-          <div className="">{description}</div>
+          <div>{description}</div>
           <h2>$ {price}</h2>
           <button className="comic-button" onClick={addToCart}>
             Add to Cart
