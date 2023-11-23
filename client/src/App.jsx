@@ -39,7 +39,9 @@ function App() {
       <div>
         <StoreProvider>
           <Header />
-          <Outlet />
+          <div className='main'>
+            <Outlet />
+          </div>
           <Footer />
         </StoreProvider>
       </div>
