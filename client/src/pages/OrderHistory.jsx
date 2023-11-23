@@ -26,11 +26,11 @@ function OrderHistory() {
                 <h3>
                   {new Date(parseInt(order.purchaseDate)).toLocaleDateString()}
                 </h3>
-                <div className="flex-row">
+                <div className="d-flex justify-content-md-center align-content-between flex-wrap" style={{ textAlign: "center" }}>
                   {order.meals.map(({ _id, image, name, price }, index) => (
-                    <div key={index} className="card px-1 py-1">
-                      <Link to={`/meals/${_id}`}>
-                        <img alt={name} src={`/images/${image}`} />
+                    <div key={index} className="card p-1">
+                      <Link to={`/meals/${_id}`} >
+                        <img alt={name} src={`/images/${image}`} className="card-image" />
                         <p>{name}</p>
                       </Link>
                       <div>
