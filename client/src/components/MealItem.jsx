@@ -29,7 +29,7 @@ function MealItem(item) {
 
   return (
     <div className="card">
-      <Link style={{ textDecoration: "none" }}>
+      <Link to={`/meals/${_id}`} style={{ textDecoration: "none" }}>
         <img src={`/images/${image}`} className="card-image"></img>
         <div className="title"> {name} </div>
       </Link>

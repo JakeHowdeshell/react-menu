@@ -1,13 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import App from './App.jsx'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import App from './App.jsx';
 
-import Home from './pages/HomePage'
-import Meals from './pages/MealsPage.jsx'
-import Cart from './pages/Cart'
-import OrderHistory from './pages/OrderHistory'
+import Home from './pages/HomePage';
+import Meals from './pages/MealsPage.jsx';
+import Cart from './pages/Cart';
+import OrderHistory from './pages/OrderHistory';
+import SingleMeal from './pages/SingleMeal';
 
 const router = createBrowserRouter([
   {
@@ -29,8 +30,12 @@ const router = createBrowserRouter([
       },
       {
         path: '/orderhistory',
-        element: < OrderHistory/>
-      }
+        element: < OrderHistory/>,
+      },
+      {
+        path: "/meals/:id",
+        element: <SingleMeal/>,
+      },
     ],
   },
 ]);
