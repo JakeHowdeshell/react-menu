@@ -4,7 +4,7 @@ import { QUERY_MEAL } from "../utils/queries";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../utils/actions";
 import { useStoreContext } from "../utils/GlobalState";
 import { useParams, Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import { idbPromise } from "../utils/helpers";
 
 export default function SingleMeal() {
     const { id } = useParams();
@@ -30,11 +30,16 @@ export default function SingleMeal() {
           _id: _id,
           purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
         });
+        idbPromise("cart", "put", {
+          ...itemInCart,
+          purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
+        });
       } else {
         dispatch({
           type: ADD_TO_CART,
           product: { ...data, purchaseQuantity: 1 },
         });
+         idbPromise("cart", "put", { ...meal, purchaseQuantity: 1 });
       }
     };
 
