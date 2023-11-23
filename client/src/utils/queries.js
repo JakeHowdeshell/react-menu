@@ -30,13 +30,13 @@ export const QUERY_MEAL = gql`
   }
 `;
 
-export const QUERY_CHECKOUT = gql`
-  query getCheckout($meals: [ID]!) {
-    checkout(meals: $meals) {
-      session
-    }
-  }
-`;
+// export const QUERY_CHECKOUT = gql`
+//   query getCheckout($meals: [ID]!) {
+//     checkout(meals: $meals) {
+//       session
+//     }
+//   }
+// `;
 
 export const QUERY_ALL_MEALS = gql`
   query allMeals {
