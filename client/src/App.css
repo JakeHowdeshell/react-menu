@@ -75,8 +75,9 @@
 }
 
   #title {
-    font-size: 28px;
+    font-size: 35px;
     font-weight: 600;
+    font-family: var(--titleFont);
     display: flex;
       justify-content: space-evenly;
       align-items: center;

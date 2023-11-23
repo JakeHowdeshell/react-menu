@@ -24,7 +24,7 @@ const AppNavbar = () => {
         <Nav variant='pills' defaultActiveKey="/" className='navbar'>
         <Container fluid>
           <Navbar.Brand id="title">
-            Restauraunt Name
+            Sabor Mexicano
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbar" onClick={handleToggle}>
           <FontAwesomeIcon icon={faBars} size="lg" style={{color: "#ffffff",}} />
