@@ -12,6 +12,8 @@ function MealItem(item) {
   const { cart } = state;
 
   const addToCart = () => {
+    const addtocart = confirm("Add to the cart?");
+    if (addtocart){
     const itemInCart = cart.find((cartItem) => cartItem._id === _id);
     console.log("clicked")
     if (itemInCart) {
@@ -32,6 +34,7 @@ function MealItem(item) {
       idbPromise("cart", "put", { ...item, purchaseQuantity: 1 });
     }
     alert("Just add one meal to Cart");
+  }
   };
 
   return (

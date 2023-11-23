@@ -6,7 +6,7 @@ import { idbPromise } from "../utils/helpers";
 import CartMeal from "../components/CartMeal";
 import Auth from "../utils/auth";
 import { useStoreContext } from "../utils/GlobalState";
-import { ADD_MULTIPLE_TO_CART } from "../utils/actions";
+import { ADD_MULTIPLE_TO_CART, CLEAR_CART } from "../utils/actions";
 
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
@@ -48,6 +48,11 @@ const Cart = () => {
       },
     });
   }
+  function submitClear(){
+    dispatch({ type: CLEAR_CART});
+    idbPromise("cart", "clear");
+  }
+
   console.log(state.cart);
   return (
     <div className="cart">
@@ -68,6 +73,7 @@ const Cart = () => {
             ) : (
               <span>Log In to Check Out</span>
             )}
+            <button onClick={submitClear}>Clearcart</button>
           </div>
         </div>
       ) : (
