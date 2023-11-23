@@ -4,6 +4,10 @@ import { useQuery } from "@apollo/client";
 import { QUERY_ALL_MEALS } from "../utils/queries";
 import MealItem from "./MealItem";
 
+const styles = {
+  font: 'LobsterTwo'
+}
+
 export default function AllMeals() {
   console.log("All Meals");
 
@@ -17,7 +21,7 @@ export default function AllMeals() {
 
   return (
     <div className="my-2">
-      <p>
+      <p className="text-center description">
         Welcome to "Sabor Mexicano" Food Truck. Indulge your taste buds in the
         vibrant flavors of Mexico right at our doorstep! At Sabor Mexicano,
         we're not just a food truck; we're a culinary journey through the heart
@@ -27,8 +31,8 @@ export default function AllMeals() {
         savory fillings to zesty guacamole made with the freshest avocados, each
         dish is a celebration of authentic Mexican flavors.
       </p>
-      <h2>All Meals</h2>
-      <div className="col justify-content-md-center">
+      <h2 className="px-5">All Meals</h2>
+      <div className="col justify-content-md-center px-3 py-4">
         <h2>{name}</h2>
         <div className="d-flex justify-content-md-center align-content-between flex-wrap">
           {allMeals.map((meal) => (
