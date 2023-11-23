@@ -4,10 +4,6 @@ import { useQuery } from "@apollo/client";
 import { QUERY_ALL_MEALS } from "../utils/queries";
 import MealItem from "./MealItem";
 
-const styles = {
-  font: 'LobsterTwo'
-}
-
 export default function AllMeals() {
   console.log("All Meals");
 
@@ -21,17 +17,17 @@ export default function AllMeals() {
 
   return (
     <div className="my-2">
-      <p className="text-center description">
-        Welcome to "Sabor Mexicano" Food Truck. Indulge your taste buds in the
-        vibrant flavors of Mexico right at our doorstep! At Sabor Mexicano,
-        we're not just a food truck; we're a culinary journey through the heart
-        of Mexican cuisine. Our menu is a Fiesta of Flavors where you Embark on
-        a delicious adventure with our diverse selection inspired by the rich
-        culinary traditions of Mexico. From sizzling street tacos bursting with
-        savory fillings to zesty guacamole made with the freshest avocados, each
-        dish is a celebration of authentic Mexican flavors.
-      </p>
-      <h2 className="px-5">All Meals</h2>
+      <div className="flexContainer">
+        <p className="text-center description">
+          Welcome to <span className="textHighlight">Sabor Mexicano Food Truck</span>. Indulge your taste buds in the
+          vibrant flavors of Mexico right at our doorstep! At Sabor Mexicano,
+          we're not just a food truck; we're a culinary journey through the heart
+          of Mexican cuisine. Our menu is a Fiesta of Flavors where you Embark on
+          a delicious adventure with our diverse selection inspired by the rich
+          culinary traditions of Mexico.
+        </p>
+      </div>
+      <h2 className="subheading">All Meals</h2>
       <div className="col justify-content-md-center px-3 py-4">
         <h2>{name}</h2>
         <div className="d-flex justify-content-md-center align-content-between flex-wrap">
