@@ -12,7 +12,7 @@ export default function SingleMeal() {
     const {loading, data} = useQuery(QUERY_MEAL, {
         variables: {id: id},
     });
-    const meal = data?.meal||{};
+    const meal = data?.meal || {};
 
     console.log("meal: ", meal);
     const [state, dispatch] = useStoreContext();
@@ -37,16 +37,17 @@ export default function SingleMeal() {
       } else {
         dispatch({
           type: ADD_TO_CART,
-          product: { ...data, purchaseQuantity: 1 },
+          meal: { ...meal, purchaseQuantity: 1 },
         });
          idbPromise("cart", "put", { ...meal, purchaseQuantity: 1 });
       }
+      alert("Just add one meal to Cart");
     };
 
     if(loading) {
         return <div>Loading...</div>
     }
-    
+
     return (
         <div className="card-lg">
           <h2 className="">{name}</h2>

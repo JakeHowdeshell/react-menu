@@ -31,6 +31,7 @@ function MealItem(item) {
       });
       idbPromise("cart", "put", { ...item, purchaseQuantity: 1 });
     }
+    alert("Just add one meal to Cart");
   };
 
   return (
