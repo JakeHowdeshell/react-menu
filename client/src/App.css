@@ -109,7 +109,7 @@
 
   .navbar-toggler-icon {
     color: var(--accentTeal);
-    /* background-color: #45B5AA; */
+    /* background-color: var(--accentTeal); */
   }
 
   .bs-navbar-toggler-icon-bg {
@@ -154,7 +154,7 @@
   }
 
   .btn-btn-success {
-    border: 2px solid var(--accentTeal);
+  border: 2px solid var(--accentTeal);
   margin: 5px 5px;
   border-radius: 10px;
   padding: 10px;
@@ -197,13 +197,31 @@
   background: white;
   padding: .4em;
   border-radius: 6px;
-  border-color: #45B5AA;
+  border-color: var(--accentTeal);
+}
+
+.card-lg {
+  margin: 5px auto;
+  width: 65%;
+  background: white;
+  padding: .4em;
+  border-radius: 6px;
+  border-width: 1px;
+  border: solid;
+  border-color: var(--accentTeal);
+  text-align: center;
+  
 }
 
 .card-image {
-  background-color: #45B5AA;
+  background-color: var(--accentTeal);
   width: 100%;
   border-radius: 6px 6px 0 0;
+}
+
+.card-image-lg {
+  border-radius: 6px;
+  width: 100%;
 }
 
 .card-image:hover {
@@ -216,7 +234,7 @@
   height: 80px;
   font-size: 24px;
   font-weight: 600;
-  color: #45B5AA;
+  color: var(--accentTeal);
   padding: 10px 7px 0;
 }
 
@@ -244,7 +262,7 @@
   text-align: center;
   text-decoration: none;
   color: #fff;
-  background-color: #45B5AA;
+  background-color: var(--accentTeal);
   border: 2px solid #000;
   border-radius: 10px;
   box-shadow: 3px 3px 0px #000;
@@ -281,3 +299,8 @@
 }
 
 
+.page-header {
+  margin: 50px;
+  padding: 20px;
+  font-family: var(--titleFont);
+}

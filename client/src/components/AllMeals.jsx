@@ -27,8 +27,11 @@ export default function AllMeals() {
           culinary traditions of Mexico.
         </p>
       </div>
-      <h2 className="subheading">All Meals</h2>
-      <div className="col justify-content-md-center px-3 py-4">
+      <div className="d-flex justify-content-md-center align-content-between flex-wrap">
+        <h1 className="page-header border-bottom border-dark">All Meals</h1>
+        <hr></hr>
+      </div>
+      <div className="col justify-content-md-center">
         <h2>{name}</h2>
         <div className="d-flex justify-content-md-center align-content-between flex-wrap">
           {allMeals.map((meal) => (

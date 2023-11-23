@@ -4,7 +4,7 @@ import { QUERY_MEAL } from "../utils/queries";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../utils/actions";
 import { useStoreContext } from "../utils/GlobalState";
 import { useParams, Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import { idbPromise } from "../utils/helpers";
 
 export default function SingleMeal() {
     const { id } = useParams();
@@ -12,7 +12,7 @@ export default function SingleMeal() {
     const {loading, data} = useQuery(QUERY_MEAL, {
         variables: {id: id},
     });
-    const meal = data?.meal||{};
+    const meal = data?.meal || {};
 
     console.log("meal: ", meal);
     const [state, dispatch] = useStoreContext();
@@ -30,23 +30,29 @@ export default function SingleMeal() {
           _id: _id,
           purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
         });
+        idbPromise("cart", "put", {
+          ...itemInCart,
+          purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
+        });
       } else {
         dispatch({
           type: ADD_TO_CART,
-          product: { ...data, purchaseQuantity: 1 },
+          meal: { ...meal, purchaseQuantity: 1 },
         });
+         idbPromise("cart", "put", { ...meal, purchaseQuantity: 1 });
       }
+      alert("Just add one meal to Cart");
     };
 
     if(loading) {
         return <div>Loading...</div>
     }
-    
+
     return (
         <div className="card-lg">
-          <h2 className="">{name}</h2>
+          <h2>{name}</h2>
           <img src={`/images/${image}`} className="card-image-lg"></img>
-          <div className="">{description}</div>
+          <div>{description}</div>
           <h2>$ {price}</h2>
           <button className="comic-button" onClick={addToCart}>
             Add to Cart
