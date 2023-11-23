@@ -21,7 +21,10 @@ export default function Meals() {
   }
   return (
     <div className="col justify-content-md-center">
-      <h2>{name}</h2>
+      <div className="d-flex justify-content-md-center align-content-between flex-wrap">
+        <h1 className="page-header border-bottom border-dark">{name}</h1>
+        <hr></hr>
+      </div>
       <div className="d-flex justify-content-md-center align-content-between flex-wrap">
         {meals.map((meal) => (
           <MealItem

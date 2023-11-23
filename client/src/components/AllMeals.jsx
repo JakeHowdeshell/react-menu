@@ -27,7 +27,10 @@ export default function AllMeals() {
         savory fillings to zesty guacamole made with the freshest avocados, each
         dish is a celebration of authentic Mexican flavors.
       </p>
-      <h2>All Meals</h2>
+      <div className="d-flex justify-content-md-center align-content-between flex-wrap">
+        <h1 className="page-header border-bottom border-dark">All Meals</h1>
+        <hr></hr>
+      </div>
       <div className="col justify-content-md-center">
         <h2>{name}</h2>
         <div className="d-flex justify-content-md-center align-content-between flex-wrap">
