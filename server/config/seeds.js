@@ -41,7 +41,7 @@ db.once("open", async () => {
       price: 7.99,
     },
     {
-      name: 'Cheese "n" Chive Morning Delight',
+      name: "Cheese 'n' Chive Morning Delight",
       category: categories[0]._id,
       description:
         "Dive into a blend of creamy scrambled eggs, shredded cheese, and fresh chives, all hugged by a soft tortilla. A classic twist on breakfast happiness!",

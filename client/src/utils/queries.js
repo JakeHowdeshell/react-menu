@@ -15,6 +15,21 @@ export const QUERY_MEALS = gql`
   }
 `;
 
+export const QUERY_MEAL = gql`
+  query meal($id: ID!) {
+    meal(_id: $id) {
+      _id
+      name
+      description
+      price
+      image
+      category {
+        _id
+      }
+    }
+  }
+`;
+
 export const QUERY_CHECKOUT = gql`
   query getCheckout($meals: [ID]!) {
     checkout(meals: $meals) {
