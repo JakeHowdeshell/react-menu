@@ -77,11 +77,7 @@ const Cart = () => {
         <hr></hr>
       </div>
       {state.cart.length ? (
-        <><div className="col d-flex justify-content-center flex-wrap">
-          {state.cart.map((meal) => (
-            <CartMeal key={meal._id} meal={meal} />
-          ))}
-        </div>
+        <>
         <div className="checkOutInfo">
           <div className="checkoutTotal">
             Total: ${calculateTotal()}
@@ -97,9 +93,17 @@ const Cart = () => {
                 <button className="cardRemove" onClick={submitClear}>Clear Cart</button>
             </div>
           </div>
+        <div className="col d-flex justify-content-center flex-wrap">
+          {state.cart.map((meal) => (
+            <CartMeal key={meal._id} meal={meal} />
+          ))}
+        </div>
+        
           </>
       ) : (
-        <h3>Don't go hungry! Add something to your cart!</h3>
+        <div className="checkOutInfo">
+          <h3>Don't go hungry! Add something to your cart!</h3>
+        </div>
       )}
     </div>
   );
