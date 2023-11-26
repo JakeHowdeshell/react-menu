@@ -220,7 +220,7 @@
 
 .card {
   margin: 10px;
-  width: 390px;
+  max-width: 390px;
   background: white;
   padding: .6em;
   border-radius: 15px;
@@ -299,7 +299,7 @@
 }
 
 .comic-button {
-  width: 200px;
+  max-width: 200px;
   padding: 1px 1px;
   font-size: 20px;
   font-weight: bold;
