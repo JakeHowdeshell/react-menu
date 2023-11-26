@@ -39,7 +39,10 @@ const CartMeal = ({ meal }) => {
       </div>
       <div>
         <div className="cardActions">
-          <h4 className="heading">{meal.name}, ${meal.price}</h4>
+          <h4 className="heading">{meal.name}
+          <div className="price"> ${meal.price}
+          </div>
+          </h4>
         </div>
         <div className="cardActions">
           <span className="cardQuan">Quantity:</span>

@@ -394,7 +394,7 @@
 
 .cart {
   /* viewport-fit: 100%; */
-  min-height: 65vh;
+  min-height: 70vh;
 }
 
 .checkOutInfo {
@@ -405,6 +405,11 @@
   padding-top: 0px;
   margin-bottom: 20px;
 }
+
+.price {
+  padding-top: 15px;
+}
+
 .checkoutTotal {
   padding-inline: 15px;
   font-weight: 600;

@@ -93,7 +93,7 @@ const Cart = () => {
                 <button className="cardRemove" onClick={submitClear}>Clear Cart</button>
             </div>
           </div>
-        <div className="col d-flex justify-content-center flex-wrap">
+        <div className="col d-flex justify-content-center flex-wrap mb-5">
           {state.cart.map((meal) => (
             <CartMeal key={meal._id} meal={meal} />
           ))}
