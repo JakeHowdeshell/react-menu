@@ -33,7 +33,7 @@ function MealItem(item) {
       });
       idbPromise("cart", "put", { ...item, purchaseQuantity: 1 });
     }
-    alert("Just add one meal to Cart");
+    alert("Meal added to cart!");
   }
   };
 
@@ -44,10 +44,12 @@ function MealItem(item) {
         <div className="title"> {name} </div>
       </Link>
       <div className="heading">{description}</div>
-      <h2>$ {price}</h2>
+      <div className="cardActions">
+      <h2 className="h2Custom">${price}</h2>
       <button className="comic-button" onClick={addToCart}>
         Add to Cart
       </button>
+      </div>
     </div>
   );
 }

@@ -41,7 +41,7 @@ export default function SingleMeal() {
         });
          idbPromise("cart", "put", { ...meal, purchaseQuantity: 1 });
       }
-      alert("Just add one meal to Cart");
+      alert("Meal added to Cart!");
     };
 
     if(loading) {
