@@ -16,7 +16,7 @@ export default function AllMeals() {
   }
 
   return (
-    <div className="my-2">
+    <div className=" homeContainer">
       <div className="flexContainer">
         <p className="text-center description">
           Welcome to <span className="textHighlight">Sabor Mexicano Food Truck</span>. Indulge your taste buds in the
@@ -31,9 +31,9 @@ export default function AllMeals() {
         <h1 className="page-header border-bottom border-dark">All Meals</h1>
         <hr></hr>
       </div>
-      <div className="col justify-content-md-center">
+      <div className="col d-flex justify-content-center">
         <h2>{name}</h2>
-        <div className="d-flex justify-content-md-center align-content-between flex-wrap">
+        <div className="d-flex justify-content-md-center flex-wrap">
           {allMeals.map((meal) => (
             <MealItem
               key={meal._id}

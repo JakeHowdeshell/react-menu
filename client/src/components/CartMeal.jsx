@@ -33,23 +33,27 @@ const CartMeal = ({ meal }) => {
   };
 
   return (
-    <div className="">
+    <div className="card">
       <div>
-        <img src={`/images/${meal.image}`} alt="A Delicious Meal" />
+        <img className="card-image" src={`/images/${meal.image}`} alt="A Delicious Meal" />
       </div>
       <div>
-        <div>
-          {meal.name}, ${meal.price}
+        <div className="cardActions">
+          <h4 className="heading">{meal.name}
+          <div className="price"> ${meal.price}
+          </div>
+          </h4>
         </div>
-        <div>
-          <span>Quantity:</span>
+        <div className="cardActions">
+          <span className="cardQuan">Quantity:</span>
           <input
             type="number"
             placeholder="1"
             value={meal.purchaseQuantity}
             onChange={onChange}
+            className="inputBar"
           />
-          <span onClick={() => removeFromCart(meal)}>Remove</span>
+          <span className="cardRemove" onClick={() => removeFromCart(meal)}>Remove</span>
         </div>
       </div>
     </div>

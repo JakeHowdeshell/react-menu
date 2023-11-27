@@ -73,26 +73,37 @@ const Cart = () => {
   return (
     <div className="cart">
       <div className="d-flex justify-content-md-center align-content-between flex-wrap">
-        <h1 className="page-header border-bottom border-dark">View You Cart</h1>
+        <h1 className="page-header border-bottom border-dark">View Your Cart</h1>
         <hr></hr>
       </div>
       {state.cart.length ? (
-        <div>
+        <>
+        <div className="checkOutInfo">
+          <div className="checkoutTotal">
+            Total: ${calculateTotal()}
+          </div>
+          <div className="loginCheckout">
+              {Auth.loggedIn() ? (
+                <button className="cardRemove" onClick={submitCheckout}>Checkout</button>
+              ) : (
+                <div className="checkoutTotal">Log In to Check Out</div>
+              )}
+            </div>
+            <div className="clearCart">
+                <button className="cardRemove" onClick={submitClear}>Clear Cart</button>
+            </div>
+          </div>
+        <div className="col d-flex justify-content-center flex-wrap mb-5">
           {state.cart.map((meal) => (
             <CartMeal key={meal._id} meal={meal} />
           ))}
-          <div className="">
-            Total: ${calculateTotal()}
-            {Auth.loggedIn() ? (
-              <button onClick={submitCheckout}>Checkout</button>
-            ) : (
-              <span>Log In to Check Out</span>
-            )}
-            <button onClick={submitClear}>Clearcart</button>
-          </div>
         </div>
+        
+          </>
       ) : (
-        <h3>Don't go hungry! Add something to your cart!</h3>
+        <div className="checkOutInfo">
+          <h3>Don't go hungry! Add something to your cart!</h3>
+        </div>
       )}
     </div>
   );
