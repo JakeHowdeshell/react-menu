@@ -86,7 +86,7 @@ const Cart = () => {
               {Auth.loggedIn() ? (
                 <button className="cardRemove" onClick={submitCheckout}>Checkout</button>
               ) : (
-                <div className="checkoutTotal">Log In to Check Out</div>
+                <div className="checkoutTotal">Log In or Sign Up to Check Out</div>
               )}
             </div>
             <div className="clearCart">
