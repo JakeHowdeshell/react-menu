@@ -18,9 +18,7 @@
     "@apollo/client": "^3.7.15",
     "graphql": "^16.6.0",
     "jwt-decode": "^3.1.2",
-    "@stripe/stripe-js": "^1.54.0"
-  },
-  "devDependencies": {
+    "@stripe/stripe-js": "^1.54.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
