@@ -1,37 +1,53 @@
-# React Food Truck Menu ![](https://img.shields.io/badge/contributers-4-blue?logo=github)
-=======
-## Project Title
+# Sabor Mexicano ![](https://img.shields.io/badge/contributers-4-blue?logo=github)
 
-React Food Truck Menu; 
+## Description
+This full stack MERN application serves as a menu and ordering website for restaurants and food trucks. Our application specifically serves Sabor Mexicano, an Austin based, AI generated and designed food truck that serves authentic Mexican food. Our application follows the MERN stack, utilizing a MongoDB database, a GraphQL query layer, Express, React and Node. 
+
 
 ## Table of Contents
 
-- [Project Description](#project-description)
+- [Installation](#installation)
 - [Technologies Used](#technologies-used)
-- [Screenshots](#screenshots)
-- [Deployed Webpage](#deployed-webpage)
+- [Example](#example)
+- [Contributors](#contributors)
+- [Deploy](#deploy)
+- [License](#license)
 - [Repository](#repository)
 
-## Project Description
+## Installation
+
+```
+npm install
+npm run seed
+npm run develop
+```
 
 ## Technologies Used
 
-<!-- need to update  -->
+![](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)![](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)![](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)![](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)![](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)![](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)![](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
 
-Project was created with:
+## Example
 
-![](https://img.shields.io/badge/J--query%20v3.5.1-0769AD?logo=jquery) ![](https://img.shields.io/badge/Bulma%20v0.9.4-white?logo=Bulma) ![](https://img.shields.io/badge/API%20Ninjas%20/v1/quotes%20&%20/v1/historicalfigures%20&%20/v1/celebrity-black) ![](https://img.shields.io/badge/Model%20JS-yellow) ![](https://img.shields.io/badge/Wikipedia%20Preview%20API-000000?logo=Wikipedia)
+![Screenshot of application.](./client/src/assets/homepage.png)
 
-## Screenshots
 
-![]()
-![]()
-![]()
-![]()
-![]()
+## Contributors
 
-## Deployed Webpage
+* [Chase Ostien](https://github.com/ChaseOstien)
+* [Richard Warden](https://github.com/r-warden)
+* [Jake Howdeshell](https://github.com/JakeHowdeshell)
+* [Kenny Zhang](https://github.com/KennyZhang12138)
 
+## Deploy
+
+Website: https://sabor-mexicano-aded3d6892cd.herokuapp.com/
+
+## License
+
+ISC License
+
+https://opensource.org/licenses/ISC
 
 ## Repository
 
+- GitHub: [Food-Menu](https://github.com/JakeHowdeshell/react-menu)
