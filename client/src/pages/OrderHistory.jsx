@@ -16,12 +16,14 @@ function OrderHistory() {
     <>
     <div className="orderHistory">
       <div className="d-flex justify-content-md-center align-content-between flex-wrap">
-
+        <h2 className="page-header border-bottom border-dark">
+            Order History for {user.firstName} {user.lastName}
+        </h2>
+      </div>
+           <div className="d-flex justify-content-md-center align-content-between flex-wrap"> 
         {user.orders ? (
           <>
-            <h2 className="page-header border-bottom border-dark">
-              Order History for {user.firstName} {user.lastName}
-            </h2>
+          
             {user.orders.map((order) => (
               <div key={order._id} className="my-2">
                 <h3 className="checkOutInfo">
