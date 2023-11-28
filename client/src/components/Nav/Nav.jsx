@@ -46,10 +46,9 @@ const AppNavbar = () => {
               <Nav.Link as={Link} to="/cart" className='links' eventKey="link-5">
                     Cart
                   </Nav.Link>
-              <Nav>
               {Auth.loggedIn() ? (
                 <>
-                  <Nav.Link as={Link} to="/orderhistory" className='links'>
+                  <Nav.Link as={Link} to="/orderhistory" className='links' eventKey="link-6">
                     Order History
                   </Nav.Link>
                   <Nav.Link onClick={Auth.logout} className='links'>Logout</Nav.Link>
@@ -59,7 +58,6 @@ const AppNavbar = () => {
                   Login/Sign Up
                 </Nav.Link>
               )}
-            </Nav>
             </Nav>
           </Navbar.Collapse>
         </Container>

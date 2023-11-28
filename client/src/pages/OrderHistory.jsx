@@ -14,43 +14,46 @@ function OrderHistory() {
 
   return (data) ? (
     <>
-      <div className="container my-1">
-        <Link to="/">← Back to Menu</Link>
+    <div className="orderHistory">
+      <div className="d-flex justify-content-md-center align-content-between flex-wrap">
 
         {user.orders ? (
           <>
-            <h2>
+            <h2 className="page-header border-bottom border-dark">
               Order History for {user.firstName} {user.lastName}
             </h2>
             {user.orders.map((order) => (
               <div key={order._id} className="my-2">
-                <h3>
+                <h3 className="checkOutInfo">
                   {new Date(parseInt(order.purchaseDate)).toLocaleDateString()}
                 </h3>
                 <div
-                  className="d-flex justify-content-md-center align-content-between flex-wrap"
-                  style={{ textAlign: "center" }}
+                  className="col d-flex justify-content-center flex-wrap mb-5"
                 >
                   {order.meals.map(({ _id, image, name, price }, index) => (
-                    <div key={index} className="card p-1">
+                    <div key={index} className="card">
                       <Link to={`/meals/${_id}`}>
                         <img
                           alt={name}
                           src={`/images/${image}`}
                           className="card-image"
                         />
-                        <p>{name}</p>
-                      </Link>
-                      <div>
-                        <span>${price}</span>
+                        </Link>
+                        <div className="cardActions">
+                          <h4>{name}
+                            <div className="cardActions">
+                              <span>${price}</span>
+                            </div>
+                            </h4>
+                        </div>
                       </div>
-                    </div>
                   ))}
                 </div>
               </div>
             ))}
           </>
         ) : null}
+      </div>
       </div>
     </>
   ) : (

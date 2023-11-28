@@ -8,6 +8,7 @@ import { faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons";
 export default function Footer() {
   return (
     <footer className="footer">
+      <div className="footerWrapper">
       <div className="description">
         <p>
           Come join us on a culinary journey through Mexico – where every dish
@@ -41,6 +42,7 @@ export default function Footer() {
           </a>{" "}
           for the latest updates on our location and menu.
         </p>
+      </div>
       </div>
     </footer>
   );

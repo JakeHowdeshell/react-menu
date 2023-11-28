@@ -41,7 +41,7 @@ export default function SingleMeal() {
         });
          idbPromise("cart", "put", { ...meal, purchaseQuantity: 1 });
       }
-      alert("Just add one meal to Cart");
+      alert("Meal added to Cart!");
     };
 
     if(loading) {
@@ -49,17 +49,23 @@ export default function SingleMeal() {
     }
 
     return (
-        <div className="card-lg">
-          <h2>{name}</h2>
-          <img src={`/images/${image}`} className="card-image-lg"></img>
-          <div>{description}</div>
-          <h2>$ {price}</h2>
-          <button className="comic-button" onClick={addToCart}>
-            Add to Cart
-          </button>
-          <Link to="/">
-            <button className="comic-button">Return to full menu</button>
-          </Link>
+      <div className="singleMeal">
+        <div className="col d-flex justify-content-center flex-wrap mb-5 p-3">
+          <div className="card">
+            <h2 className="singleMealTitle">{name}</h2>
+            <img src={`/images/${image}`} className="card-image"></img>
+            <div className="singleMealDesc">{description}</div>
+              <h2 className="cardActions2">$ {price}</h2>
+            <div className="cardActions2">
+              <button className="comic-button-singleMeal" onClick={addToCart}>
+                Add to Cart
+              </button>
+              <Link to="/">
+                <button className="comic-button-singleMeal">Return to full menu</button>
+              </Link>
+            </div>
+          </div>
         </div>
+      </div>
     );
 }
