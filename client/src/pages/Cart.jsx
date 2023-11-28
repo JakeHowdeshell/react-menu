@@ -43,7 +43,9 @@ const Cart = () => {
   function calculateTotal() {
     let total = 0;
     state.cart.forEach((meal) => {
-      total += meal.price * meal.purchaseQuantity;
+      if(meal.purchaseQuantity) {
+        total += meal.price * meal.purchaseQuantity;
+      }
     });
     return total.toFixed(2);
   }
@@ -60,7 +62,7 @@ const Cart = () => {
     });
     dispatch({ type: CLEAR_CART });
     idbPromise("cart", "clear");
-    alert("Check out")
+    alert("All checked out, thank you for your business!")
     // window.location.reload();
   }
 
