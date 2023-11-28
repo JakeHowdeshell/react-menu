@@ -81,9 +81,9 @@
     font-weight: 600;
     font-family: var(--titleFont);
     display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      color: var(--accentWhite);
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--accentWhite);
   }
 
   .links {
@@ -226,20 +226,6 @@
   border-radius: 15px;
   border: 2px solid ;
   box-shadow: 0 5px 20px rgba(0,0,0,0.4);
-  
-}
-
-.card-lg {
-  margin: 5px auto;
-  width: 65%;
-  background: white;
-  padding: .4em;
-  border-radius: 6px;
-  border-width: 1px;
-  border: solid;
-  border-color: var(--accentTeal);
-  text-align: center;
-  
 }
 
 .card-image {
@@ -250,16 +236,6 @@
   z-index : 1;
 }
 
-.card-image-lg {
-  border-radius: 6px;
-  width: 100%;
-}
-
-/* .card-image:hover {
-  transition-duration: 500ms, 500ms;
-  transform: scale(0.9);
-} */
-
 .title {
   text-transform: uppercase;
   height: 80px;
@@ -268,6 +244,22 @@
   color: var(--accentTeal);
   padding: 10px 7px 0;
   text-align: center;
+}
+
+.singleMealTitle {
+    text-transform: uppercase;
+    height: 60px;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--accentTeal);
+    padding: 10px 7px 0;
+    text-align: center;
+  }
+
+@media (max-width: 415px) {
+  .title {
+    font-size: 18px;
+  }
 }
 
 .title:hover {
@@ -283,6 +275,12 @@
   text-align: center;
 }
 
+@media (max-width: 415px) {
+  .heading {
+    font-size: 13px;
+  }
+}
+
 .heading:hover {
   cursor: pointer;
 }
@@ -292,6 +290,20 @@
   justify-content: space-around;
   padding-bottom: 10px;
   padding-top: 15px;
+}
+
+.cardActions2 {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
+  padding-top: 15px;
+}
+
+@media (max-width: 385px) {
+  .cardActions2 {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .h2Custom {
@@ -311,6 +323,27 @@
   border-radius: 10px;
   box-shadow: 3px 3px 0px #000;
   transition: all 0.3s ease;
+}
+
+.comic-button-singleMeal {
+  max-width: 200px;
+  padding: 1px 1px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: var(--accentWhite);
+  background-color: var(--accentTeal);
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 3px 3px 0px #000;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 385px) {
+  .comic-button-singleMeal {
+    margin-top: 7px;
+  }
 }
 
 .comic-button:hover {
@@ -394,7 +427,15 @@
 
 .cart {
   /* viewport-fit: 100%; */
-  min-height: 70vh;
+  min-height: 75vh;
+}
+
+.singleMeal {
+  min-height: 75vh;
+}
+
+.orderHistory {
+  min-height: 75vh;
 }
 
 .checkOutInfo {
@@ -424,4 +465,11 @@
 
 .loginCheckout {
   padding-inline: 15px;
+}
+
+.singleMealDesc {
+  font-weight: 600;
+  color: rgb(88, 87, 87);
+  padding: 15px;
+  text-align: center;
 }

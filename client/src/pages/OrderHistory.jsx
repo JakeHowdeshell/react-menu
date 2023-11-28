@@ -14,6 +14,7 @@ function OrderHistory() {
 
   return (data) ? (
     <>
+    <div className="orderHistory">
       <div className="d-flex justify-content-md-center align-content-between flex-wrap">
 
         {user.orders ? (
@@ -52,6 +53,7 @@ function OrderHistory() {
             ))}
           </>
         ) : null}
+      </div>
       </div>
     </>
   ) : (
