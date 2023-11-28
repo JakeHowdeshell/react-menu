@@ -28,7 +28,7 @@ npm run develop
 
 ## Example
 
-![Screenshot of application.](./client/src/assets/homepage.png)
+![Screenshot of application.](./client/src/assets/homepage1.png)
 
 
 ## Contributors
