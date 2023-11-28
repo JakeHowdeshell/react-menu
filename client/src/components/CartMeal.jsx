@@ -28,6 +28,7 @@ const CartMeal = ({ meal }) => {
         _id: meal._id,
         purchaseQuantity: parseInt(value),
       });
+      console.log(value);
       idbPromise("cart", "put", { ...meal, purchaseQuantity: parseInt(value) });
     }
   };
@@ -48,10 +49,11 @@ const CartMeal = ({ meal }) => {
           <span className="cardQuan">Quantity:</span>
           <input
             type="number"
-            placeholder="1"
+            placeholder="Enter a quantity"
             value={meal.purchaseQuantity}
             onChange={onChange}
             className="inputBar"
+            required
           />
           <span className="cardRemove" onClick={() => removeFromCart(meal)}>Remove</span>
         </div>
