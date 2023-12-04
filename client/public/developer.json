@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Chase Ostien",
+    "title": "Full Stack Development",
+    "linkedIn": "https://www.linkedin.com/in/chase-ostien-2a1205200/",
+    "github": "https://github.com/ChaseOstien",
+    "email": "",
+    "image": "/images/chase.png"
+  },
+  {
+    "name": "Jacob Howdeshell",
+    "title": "Full Stack Development",
+    "linkedIn": "https://www.linkedin.com/in/jacob-howdeshell-2607a3b7/",
+    "github": "https://github.com/JakeHowdeshell",
+    "email": "",
+    "image": "/images/jake.png"
+  },
+  {
+    "name": "Richard Warden",
+    "title": "Full Stack Development",
+    "linkedIn": "https://www.linkedin.com/in/richard-w-377bb4125/",
+    "github": "https://github.com/r-warden",
+    "email": "",
+    "image": "/images/richard.png"
+  },
+  {
+    "name": "Dunjiang Zhang",
+    "title": "Full Stack Development",
+    "linkedIn": "https://www.linkedin.com/in/dunjiang-zhang-6a7bba240/",
+    "github": "https://github.com/KennyZhang12138",
+    "email": "kenny.zhang12138@gmail.com",
+    "image": "/images/kenny.jpg"
+  }
+]
