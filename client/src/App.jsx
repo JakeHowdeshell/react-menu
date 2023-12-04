@@ -11,6 +11,10 @@ import { setContext } from "@apollo/client/link/context";
 
 import Header from './components/Header';
 import Footer from './components/Footer';
+import React from 'react';
+
+  import { ToastContainer } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -44,6 +48,7 @@ function App() {
           </div>
           <Footer />
         </StoreProvider>
+        <ToastContainer />
       </div>
       </ApolloProvider>
   );
