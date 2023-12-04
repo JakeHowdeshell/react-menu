@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import { useStoreContext } from "../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../utils/actions";
 import { idbPromise } from "../utils/helpers";
+import React from 'react';
+
+  import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 function MealItem(item) {
   const [state, dispatch] = useStoreContext();
@@ -12,8 +16,9 @@ function MealItem(item) {
   const { cart } = state;
 
   const addToCart = () => {
-    const addtocart = confirm("Add to the cart?");
-    if (addtocart){
+    // const addtocart = confirm("Add to the cart?");
+    toast("Your meal was added to the cart!");
+    // if (addtocart){
     const itemInCart = cart.find((cartItem) => cartItem._id === _id);
     console.log("clicked")
     if (itemInCart) {
@@ -33,8 +38,8 @@ function MealItem(item) {
       });
       idbPromise("cart", "put", { ...item, purchaseQuantity: 1 });
     }
-    alert("Meal added to cart!");
-  }
+    // alert("Meal added to cart!");
+  // }
   };
 
   return (
