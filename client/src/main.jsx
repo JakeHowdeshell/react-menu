@@ -9,6 +9,7 @@ import Meals from './pages/MealsPage.jsx';
 import Cart from './pages/Cart';
 import OrderHistory from './pages/OrderHistory';
 import SingleMeal from './pages/SingleMeal';
+import About from './pages/About';
 
 const router = createBrowserRouter([
   {
@@ -29,12 +30,16 @@ const router = createBrowserRouter([
         element: <Cart />,
       },
       {
-        path: '/orderhistory',
-        element: < OrderHistory/>,
+        path: "/orderhistory",
+        element: <OrderHistory />,
       },
       {
         path: "/meals/:id",
-        element: <SingleMeal/>,
+        element: <SingleMeal />,
+      },
+      {
+        path: "/about",
+        element: <About />,
       },
     ],
   },
