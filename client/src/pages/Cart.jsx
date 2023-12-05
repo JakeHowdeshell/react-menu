@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import React from "react";
 // import { loadStripe } from "@stripe/stripe-js";
 import { useLazyQuery, useMutation } from "@apollo/client";
 // import { QUERY_CHECKOUT } from "../utils/queries";
@@ -8,8 +9,11 @@ import Auth from "../utils/auth";
 import { useStoreContext } from "../utils/GlobalState";
 import { ADD_MULTIPLE_TO_CART, CLEAR_CART } from "../utils/actions";
 
-import {ADD_ORDER} from "../utils/mutations"
-import {QUERY_USER} from "../utils/queries"
+import { ADD_ORDER } from "../utils/mutations";
+import { QUERY_USER } from "../utils/queries";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
@@ -43,18 +47,19 @@ const Cart = () => {
   function calculateTotal() {
     let total = 0;
     state.cart.forEach((meal) => {
-      if(meal.purchaseQuantity) {
+      if (meal.purchaseQuantity) {
         total += meal.price * meal.purchaseQuantity;
       }
     });
     return total.toFixed(2);
   }
 
-  const meal_id = state.cart.map((meal)=>meal._id);
+  const meal_id = state.cart.map((meal) => meal._id);
   console.log("meal_id", meal_id);
 
-  async function submitCheckout() {
-
+  // async function submitCheckout() {
+  const submitCheckout = async () => {
+    toast("All checked out, thank you for your business!");
     await addOrder({
       variables: {
         meals: meal_id,
@@ -62,12 +67,12 @@ const Cart = () => {
     });
     dispatch({ type: CLEAR_CART });
     idbPromise("cart", "clear");
-    alert("All checked out, thank you for your business!")
+    // alert("All checked out, thank you for your business!")
     // window.location.reload();
-  }
+  };
 
-  function submitClear(){
-    dispatch({ type: CLEAR_CART});
+  function submitClear() {
+    dispatch({ type: CLEAR_CART });
     idbPromise("cart", "clear");
   }
 
@@ -75,33 +80,38 @@ const Cart = () => {
   return (
     <div className="cart">
       <div className="d-flex justify-content-md-center align-content-between flex-wrap">
-        <h1 className="page-header border-bottom border-dark">View Your Cart</h1>
+        <h1 className="page-header border-bottom border-dark">
+          View Your Cart
+        </h1>
         <hr></hr>
       </div>
       {state.cart.length ? (
         <>
-        <div className="checkOutInfo">
-          <div className="checkoutTotal">
-            Total: ${calculateTotal()}
-          </div>
-          <div className="loginCheckout">
+          <div className="checkOutInfo">
+            <div className="checkoutTotal">Total: ${calculateTotal()}</div>
+            <div className="loginCheckout">
               {Auth.loggedIn() ? (
-                <button className="cardRemove" onClick={submitCheckout}>Checkout</button>
+                <button className="cardRemove" onClick={submitCheckout}>
+                  Checkout
+                </button>
               ) : (
-                <div className="checkoutTotal">Log In or Sign Up to Check Out</div>
+                <div className="checkoutTotal">
+                  Log In or Sign Up to Check Out
+                </div>
               )}
             </div>
             <div className="clearCart">
-                <button className="cardRemove" onClick={submitClear}>Clear Cart</button>
+              <button className="cardRemove" onClick={submitClear}>
+                Clear Cart
+              </button>
             </div>
           </div>
-        <div className="col d-flex justify-content-center flex-wrap mb-5">
-          {state.cart.map((meal) => (
-            <CartMeal key={meal._id} meal={meal} />
-          ))}
-        </div>
-        
-          </>
+          <div className="col d-flex justify-content-center flex-wrap mb-5">
+            {state.cart.map((meal) => (
+              <CartMeal key={meal._id} meal={meal} />
+            ))}
+          </div>
+        </>
       ) : (
         <div className="checkOutInfo">
           <h3>Don't go hungry! Add something to your cart!</h3>
